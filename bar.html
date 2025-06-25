@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAR CODE</title>
+    <link rel="stylesheet" href="bar.css" type="text/css">
+</head>
+
+<body>
+    <div class="bar">353535</div>
+    <div class="bar3">353535</div>
+    <div class="bar2" style="--clr: cyan;">353535</div>
+</body>
+
+<script>
+    let cards = document.querySelectorAll('.bar2')
+
+    cards.forEach(card => {
+        card.onmousemove = function (e) {
+            let x = e.pageX - card.offsetLeft;
+            let y = e.pageY - card.offsetTop;
+
+            card.style.setProperty('--x', x + 'px');
+            card.style.setProperty('--y', y + 'px');
+        }
+    })
+</script>
+
+</html>
