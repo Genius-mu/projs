@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    height: 6em;
+    position: fixed;
+    background-color: rgb(0, 92, 63);
+}
+
+.score1, .score2 {
+    color: #fff;
+}
+
+header button {
+    color: #fff;
+    background-color: #066062;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6em;
+    height: 2.7em;
+    cursor: pointer;
+}
+
+header button:hover {
+    background: #dddddd;
+    color: #000;
+    border: 2px solid #000;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    margin-top: 6em;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 1em;
+    row-gap: 1em;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-90deg, rgb(49, 128, 37) 50%, rgb(9, 41, 28));
+    padding: 5% 1%;
+    /* filter: drop-shadow(); */
+}
+
+.box {
+    width: 5em;
+    height: 5em;
+    background-color: #000;
+    /* border: 4px solid #00fffb; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 1%;
+}

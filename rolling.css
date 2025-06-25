@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #555;
+    min-height: 100vh;
+}
+
+.rolling {
+    width: 20em;
+    height: 20em;
+    border-radius: 20px;
+    background-color: lime;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@property --e {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+.rolling::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: conic-gradient(from var(--e), transparent, transparent, transparent, #ff0000, transparent, transparent, transparent, blue);
+    border-radius: 20px;
+    padding: 10px;
+    animation: anim 2s linear infinite;
+}
+
+@keyframes anim {
+    0% {
+        --e: 0deg;
+    }
+    100% {
+        --e: 360deg;
+    }
+}
